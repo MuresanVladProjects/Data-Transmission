@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <title>Users manager</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="libs/vue/vue.js"></script>
+  <script type="text/javascript" src="libs/axios/axios.js"></script>
+  <script type="text/javascript" src="users.js"></script>
+</head>
+
+<body>
+  <div id="app">
+
+    <ul class="user-list">
+      <li v-for="(user, index) in users">
+        <div class="user-row">
+          <div class="user-name"><b>{{ user.name }}</b></div>
+          <div class="user-city"><i>{{ user.city }}</i></div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="centered">
+      <div class="deleteCL">
+        <input class="deleteIndex" v-model="deleteIndex" placeholder="Index">
+        <button class="deleteButton" v-on:click="deleteFun()">Delete</button>  
+      </div>
+
+      <div class="deleteCL">
+        <input class="insertName" v-model="insertName" placeholder="name">
+        <input class="insertCity" v-model="insertCity" placeholder="city">
+        <button class="insertButton" v-on:click="insertFun()">Insert</button>  
+      </div>
+
+      <div class="deleteCL">
+        <input class="updateName" v-model="updateName" placeholder="name">
+        <input class="updateCity" v-model="updateCity" placeholder="city">
+        <button class="updateButton" v-on:click="updateFun()">Update</button>  
+        <input class="updateIndex" v-model="updateIndex" placeholder="index">
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
