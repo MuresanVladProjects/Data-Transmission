@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styledraw.css">
+    <title>Drawing App</title>
+</head>
+<body>
+    <div class="panel">
+    <label for="color">Color Slider</label>
+    <input type="range" min="1" max="360" value="180" id="color" class="slider" />
+    <span class="colorbox"></span>
+    <label for="size">Size <span>20</span></label>
+    <input type="range" min="1" value="20" max="110" id="size" class="slider" />
+    <button class="reset">Reset Color</button>
+</div>
+<canvas></canvas>  
+    <script src="script.js"></script>
+</body>
+</html>
